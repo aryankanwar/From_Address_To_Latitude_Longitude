@@ -1,0 +1,25 @@
+{
+  "name": "From address to lat_long",
+  "version": "1.0.0",
+  "description": "From address to latitiude longitude",
+  "main": "lat_long.js",
+  "scripts": {
+    "test": "node lat_long.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aryankanwar/From_Address_To_Latitude_Longitude.git"
+  },
+  "dependencies": {
+    "geocoder": "^0.2.3",
+    "fast-csv": "^2.4.0 1",
+    "express": "^4.15.3",
+    "json2csv": "^3.10.0"
+  },
+  "author": "Aryan Kanwar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aryankanwar/From_Address_To_Latitude_Longitude/issues"
+  },
+  "homepage": "https://github.com/aryankanwar/From_Address_To_Latitude_Longitude#readme"
+}
