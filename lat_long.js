@@ -4,22 +4,21 @@ const json2csv   = require('json2csv');
 const fs         = require('fs');
 const csv   	 = require('fast-csv');
 // csv containing list of address 
-var stream 		 = fs.createReadStream("google.csv");  
+var stream       = fs.createReadStream("google.csv");  
 var path         = './google.csv';
 var async        = require('async');
 var responseObj  = {};
 
 
 var asyncArray   = [getCsvdata.bind(null, path, responseObj),
-				   	getLatLong.bind(null, responseObj)];
+		     getLatLong.bind(null, responseObj)];
 async.series(asyncArray ,function(err, result){
 	if(err){
 		console.log(err);
 		return err;
 	}
-
-	// new csv format
-    var fields  = ['latitude','longitude','address']; 
+     // new csv format
+    var fields     = ['latitude','longitude','address']; 
     var csvData    = result[1];
     var csv = json2csv({ data: csvData, fields: fields });
     fs.writeFile('file1.csv', csv, function(err) {  
@@ -43,7 +42,7 @@ function getCsvdata(path, responseObj, callback){
             ErrorArray.push(data);
         })
         .on('end', function () {
-        	//list of successful and error address
+            //list of successful and error address
             var ResultObject         = {Success: SuccessArray, ErrorList: ErrorArray}; 
             responseObj.adrressarray = ResultObject;
             callback(null, ResultObject);
