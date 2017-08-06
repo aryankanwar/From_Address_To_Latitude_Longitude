@@ -30,6 +30,6 @@ node lat_long.js
 ### Development
 
 Want to contribute? Great!
+Sample Output CSV generated 
 
-
-
+![Screenshot](https://user-images.githubusercontent.com/13161592/29005760-f0acf4dc-7aff-11e7-821e-dc8215577623.png)
